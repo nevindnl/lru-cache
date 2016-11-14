@@ -40,7 +40,6 @@ class HashMap
     end
   end
 
-  # uncomment when you have Enumerable included
   def to_s
     pairs = inject([]) do |strs, (k, v)|
       strs << "#{k.to_s} => #{v.to_s}"
@@ -72,7 +71,6 @@ class HashMap
   end
 
   def bucket(key)
-    # optional but useful; return the bucket corresponding to `key`
     @store[key.hash % num_buckets]
   end
 end

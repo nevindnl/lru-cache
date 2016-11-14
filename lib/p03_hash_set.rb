@@ -23,10 +23,9 @@ class HashSet < ResizingIntSet
   private
 
   def [](num)
-    # optional but useful; return the bucket corresponding to `num`
     @store[num.hash % num_buckets]
   end
-  # 
+  #
   # def num_buckets
   #   @store.length
   # end
